@@ -5,12 +5,13 @@
     </head>
     <body>
         <select id="country">
-            <option value="">Select Country</option>   
+            <option value="">Select Country</option>  
+             <!--loop goes here--> 
             @foreach ($countries as $country)
                 <option value="{{$country->id}}">{{$country->country}}</option>
             @endforeach 
+             <!--loop ends here-->
         </select>
-
         <select id="state">
             <option value="">Select State</option>    
         </select>
@@ -18,6 +19,7 @@
         <select id="city">
             <option value="">Select City</option>    
         </select>
+         <!--script goes here-->
         <script>
             $(document).ready(function(){
                 $('#country').change(function(){
@@ -46,5 +48,6 @@
                 });
             });
         </script>
+         <!--Script ends here-->
     </body>
 </html>
